@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment4">
+    <fragment
+        android:id="@+id/mainFragment4"
+        android:name="com.muratguzel.kisileruygulamas.ui.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/kisiKayitGecis"
+            app:destination="@id/kisiKayitFragment3" />
+        <action
+            android:id="@+id/kisiDetayGecis"
+            app:destination="@id/detayFragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/kisiKayitFragment3"
+        android:name="com.muratguzel.kisileruygulamas.ui.fragment.KisiKayitFragment"
+        android:label="KisiKayitFragment" />
+    <fragment
+        android:id="@+id/detayFragment4"
+        android:name="com.muratguzel.kisileruygulamas.ui.fragment.DetayFragment"
+        android:label="fragment_detay"
+        tools:layout="@layout/fragment_detay" >
+        <argument
+            android:name="kisi"
+            app:argType="com.muratguzel.kisileruygulamas.data.entity.Kisiler" />
+    </fragment>
+</navigation>
