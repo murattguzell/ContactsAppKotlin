@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView.OnQueryTextListener
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.muratguzel.kisileruygulamas.R
@@ -21,9 +22,7 @@ class MainFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
 
-        }
     }
 
     override fun onCreateView(
@@ -31,11 +30,9 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentMainBinding.inflate(inflater, container, false)
-
-        binding.fab.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.kisiKayitGecis)
-        }
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
+        binding.mainFragment = this
+        binding.mainToolBarBaslik = "Kişiler"
 
         binding.search.setOnQueryTextListener(object : OnQueryTextListener {
             override fun onQueryTextChange(newText: String?): Boolean {
@@ -51,6 +48,10 @@ class MainFragment : Fragment() {
         setRecyclerView()
         return binding.root
 
+    }
+
+    fun fub(view: View){
+        Navigation.findNavController(view).navigate(R.id.kisiKayitGecis)
 
     }
 
@@ -62,12 +63,11 @@ class MainFragment : Fragment() {
         val kisilerListesi = ArrayList<Kisiler>()
         val murat = Kisiler(1, "Murat", "0538 392 20 37")
         val nazli = Kisiler(2, "Nazlı", "0530 022 86 01")
-        val ayse = Kisiler(3, "Ayşe", "0542 213 21 21")
+        val ayse = Kisiler(3, "Ayşe", "11111111")
         kisilerListesi.add(murat)
         kisilerListesi.add(nazli)
         kisilerListesi.add(ayse)
-        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         kisilerAdapter = KisilerAdapter(requireContext(), kisilerListesi)
-        binding.recyclerView.adapter = kisilerAdapter
+        binding.kisilerAdapter = kisilerAdapter
     }
 }
