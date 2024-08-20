@@ -78,7 +78,7 @@
             android:layout_marginTop="64dp"
             android:layout_marginEnd="32dp"
             android:text="KAYDET"
-            android:onClick="@{()-> kisiKayitFragment.kisiKayit(editTextKisiAdi.getText().toString(),editTextTel.getText().toString())}"
+            android:onClick="@{()-> kisiKayitFragment.kaydet(editTextKisiAdi.getText().toString(),editTextTel.getText().toString())}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"

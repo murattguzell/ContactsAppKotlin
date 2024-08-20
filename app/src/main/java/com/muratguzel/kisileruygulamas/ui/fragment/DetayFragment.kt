@@ -7,15 +7,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.muratguzel.kisileruygulamas.R
 import com.muratguzel.kisileruygulamas.databinding.FragmentDetayBinding
+import com.muratguzel.kisileruygulamas.ui.viewmodel.DetayViewModel
 
 class DetayFragment : Fragment() {
     private lateinit var binding: FragmentDetayBinding
+    private lateinit var viewModel: DetayViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val tempViewModel: DetayViewModel by viewModels()
+        viewModel = tempViewModel
     }
 
     override fun onCreateView(
@@ -35,8 +40,7 @@ class DetayFragment : Fragment() {
         val gelenKisi = bundle.kisi
         binding.kisiNesnesi = gelenKisi
     }
-    fun guncelle(kisi_id: Int, kisi_ad: String, kisi_tel: String) {
-        Log.e("kişi Güncelle","$kisi_id - $kisi_ad -$kisi_tel")
-    }
+    fun guncelle(kisi_id: Int, kisi_ad: String, kisi_tel: String) =
+       viewModel.guncelle(kisi_id, kisi_ad, kisi_tel)
 
 }

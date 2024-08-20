@@ -8,21 +8,23 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView.OnQueryTextListener
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.muratguzel.kisileruygulamas.R
-import com.muratguzel.kisileruygulamas.data.entity.Kisiler
 import com.muratguzel.kisileruygulamas.databinding.FragmentMainBinding
 import com.muratguzel.kisileruygulamas.ui.adapter.KisilerAdapter
+import com.muratguzel.kisileruygulamas.ui.viewmodel.MainViewModel
 
 
 class MainFragment : Fragment() {
     private lateinit var binding: FragmentMainBinding
     private lateinit var kisilerAdapter: KisilerAdapter
+    private lateinit var viewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        val tempViewModel: MainViewModel by viewModels()
+        viewModel = tempViewModel
     }
 
     override fun onCreateView(
@@ -33,6 +35,10 @@ class MainFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
         binding.mainFragment = this
         binding.mainToolBarBaslik = "Kişiler"
+        viewModel.kisilerListesi.observe(viewLifecycleOwner){kisilerListesi ->
+            kisilerAdapter = KisilerAdapter(requireContext(), kisilerListesi,viewModel)
+            binding.kisilerAdapter = kisilerAdapter
+        }
 
         binding.search.setOnQueryTextListener(object : OnQueryTextListener {
             override fun onQueryTextChange(newText: String?): Boolean {
@@ -45,7 +51,6 @@ class MainFragment : Fragment() {
                 return true
             }
         })
-        setRecyclerView()
         return binding.root
 
     }
@@ -56,18 +61,6 @@ class MainFragment : Fragment() {
     }
 
     fun ara(aramaKelimesi: String) {
-        Log.e("Kişi Ara", aramaKelimesi)
-    }
-
-    fun setRecyclerView() {
-        val kisilerListesi = ArrayList<Kisiler>()
-        val murat = Kisiler(1, "Murat", "0538 392 20 37")
-        val nazli = Kisiler(2, "Nazlı", "0530 022 86 01")
-        val ayse = Kisiler(3, "Ayşe", "11111111")
-        kisilerListesi.add(murat)
-        kisilerListesi.add(nazli)
-        kisilerListesi.add(ayse)
-        kisilerAdapter = KisilerAdapter(requireContext(), kisilerListesi)
-        binding.kisilerAdapter = kisilerAdapter
+        viewModel.ara(aramaKelimesi)
     }
 }
