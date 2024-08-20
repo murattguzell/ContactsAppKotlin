@@ -14,6 +14,7 @@ import com.muratguzel.kisileruygulamas.R
 import com.muratguzel.kisileruygulamas.databinding.FragmentMainBinding
 import com.muratguzel.kisileruygulamas.ui.adapter.KisilerAdapter
 import com.muratguzel.kisileruygulamas.ui.viewmodel.MainViewModel
+import com.muratguzel.kisileruygulamas.util.switch
 
 
 class MainFragment : Fragment() {
@@ -56,11 +57,15 @@ class MainFragment : Fragment() {
     }
 
     fun fub(view: View){
-        Navigation.findNavController(view).navigate(R.id.kisiKayitGecis)
-
+        Navigation.switch(view, R.id.kisiKayitGecis)
     }
 
     fun ara(aramaKelimesi: String) {
         viewModel.ara(aramaKelimesi)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.kisileriYukle()
     }
 }

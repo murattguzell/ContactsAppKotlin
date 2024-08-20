@@ -12,6 +12,7 @@ import com.muratguzel.kisileruygulamas.data.entity.Kisiler
 import com.muratguzel.kisileruygulamas.databinding.CardTasarimBinding
 import com.muratguzel.kisileruygulamas.ui.fragment.MainFragmentDirections
 import com.muratguzel.kisileruygulamas.ui.viewmodel.MainViewModel
+import com.muratguzel.kisileruygulamas.util.switch
 
 class KisilerAdapter(var context: Context, var kisilerListesi: List<Kisiler>,var viewModel: MainViewModel) :
     RecyclerView.Adapter<KisilerAdapter.CardTasarimVH>() {
@@ -36,7 +37,7 @@ class KisilerAdapter(var context: Context, var kisilerListesi: List<Kisiler>,var
 
         holder.itemView.setOnClickListener {
             val gecis = MainFragmentDirections.kisiDetayGecis(kisi)
-            Navigation.findNavController(it).navigate(gecis)
+            Navigation.switch(it, gecis)
         }
         holder.tasarim.imageViewSil.setOnClickListener {
             Snackbar.make(it,"${kisi.kisi_ad} Silinsin mi?",Snackbar.LENGTH_LONG).setAction("EVET"){

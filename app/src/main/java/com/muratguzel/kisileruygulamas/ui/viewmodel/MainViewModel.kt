@@ -19,9 +19,10 @@ class MainViewModel : ViewModel() {
     fun delete(kisId: Int) =
         viewModelScope.launch(Dispatchers.Main) {
             krepo.delete(kisId)
+            kisileriYukle()
         }
 
-    private fun kisileriYukle() = viewModelScope.launch(Dispatchers.Main) {
+    fun kisileriYukle() = viewModelScope.launch(Dispatchers.Main) {
         kisilerListesi.value = krepo.kisileriYukle()
     }
 
