@@ -15,7 +15,9 @@ import com.muratguzel.kisileruygulamas.databinding.FragmentMainBinding
 import com.muratguzel.kisileruygulamas.ui.adapter.KisilerAdapter
 import com.muratguzel.kisileruygulamas.ui.viewmodel.MainViewModel
 import com.muratguzel.kisileruygulamas.util.switch
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 
 class MainFragment : Fragment() {
     private lateinit var binding: FragmentMainBinding

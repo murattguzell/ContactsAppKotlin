@@ -11,7 +11,9 @@ import androidx.fragment.app.viewModels
 import com.muratguzel.kisileruygulamas.R
 import com.muratguzel.kisileruygulamas.databinding.FragmentKisiKayitBinding
 import com.muratguzel.kisileruygulamas.ui.viewmodel.KisiKayitViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 
 class KisiKayitFragment : Fragment() {
 

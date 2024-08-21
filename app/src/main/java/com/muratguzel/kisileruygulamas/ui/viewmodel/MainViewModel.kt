@@ -5,11 +5,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.muratguzel.kisileruygulamas.data.entity.Kisiler
 import com.muratguzel.kisileruygulamas.data.repo.KisilerRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class MainViewModel : ViewModel() {
-    val krepo = KisilerRepository()
+@HiltViewModel
+class MainViewModel @Inject constructor(var krepo: KisilerRepository) : ViewModel() {
     var kisilerListesi = MutableLiveData<List<Kisiler>>()
 
     init {

@@ -3,8 +3,7 @@ package com.muratguzel.kisileruygulamas.data.repo
 import com.muratguzel.kisileruygulamas.data.datasource.KisilerDataSource
 import com.muratguzel.kisileruygulamas.data.entity.Kisiler
 
-class KisilerRepository {
-    var kds = KisilerDataSource()
+class KisilerRepository(var kds: KisilerDataSource) {
 
     suspend fun kisiKayit(kisi_ad: String, kisi_tel: String) =
         kds.kisiKayit(kisi_ad, kisi_tel)

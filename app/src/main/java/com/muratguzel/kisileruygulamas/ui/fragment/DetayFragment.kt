@@ -12,6 +12,9 @@ import androidx.navigation.fragment.navArgs
 import com.muratguzel.kisileruygulamas.R
 import com.muratguzel.kisileruygulamas.databinding.FragmentDetayBinding
 import com.muratguzel.kisileruygulamas.ui.viewmodel.DetayViewModel
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 
 class DetayFragment : Fragment() {
     private lateinit var binding: FragmentDetayBinding
