@@ -9,39 +9,16 @@ Bu proje, telefon rehberi uygulamasıdır ve kullanıcıların istedikleri kişi
 - Kullanıcılar, telefon rehberlerine yeni kişiler ekleyebilirler. Her kişi için isim, telefon numarası gibi temel bilgileri girerek rehberlerine kolayca bilgi ekleyebilirler.
 - Kullanıcılar, rehberdeki kişilerin bilgilerini güncelleyebilirler. İsim, telefon numarası veya diğer detaylarda değişiklik yaparak her zaman güncel bilgilerle rehberlerini koruyabilirler.
 - Kullanıcılar, rehberlerinden istemedikleri kişileri kolayca silebilirler. Bu sayede gereksiz veya eski iletişim bilgilerini kaldırarak rehberlerini temiz tutabilirler.
-- Tüm iletişim bilgileri internet üzerinde güvenli bir veri tabanında saklanır. Bu, verilerinizi her zaman erişilebilir ve güvende tutar
+- Tüm iletişim bilgileri internet üzerinde güvenli bir veri tabanında saklanır. Bu, verilerinizi her zaman erişilebilir ve güvende tutar.
 
-  
-# Food Guide
+## Kullanılan Teknolojiler
 
 **Android Jetpack**
-
-**LiveData:**
-
-Projede Kullanım Amacı: UI bileşenlerini veri değişikliklerine tepki verecek şekilde günceller.
-
-**ViewModel:**
-
-Projede Kullanım Amacı: UI verilerini yönetir ve UI ile veri arasındaki yaşam döngüsü yönetimini sağlar.
-
-**DataBinding:**
-
-Projede Kullanım Amacı: UI bileşenlerini XML'den doğrudan veri modeline bağlar.
-
-**Hilt:**
-
-Açıklama: Dependency Injection (DI) için kullanılan bir kütüphane.
-Projede Kullanım Amacı: Bağımlılıkları yönetir ve uygulamanın modülerliğini artırır.
 
 **Retrofit:**
 
 Açıklama: HTTP isteklerini basit bir şekilde yönetmek için kullanılan bir kütüphane.
 Projede Kullanım Amacı: API çağrılarını gerçekleştirmek ve JSON verilerini Kotlin veri sınıflarına dönüştürmek. Hem GET (veri çekme) hem de POST (veri gönderme) işlemleri yapılır.
-
-**Coroutines:**
-
-Açıklama: Kotlin'de asenkron işlemleri yönetmek için kullanılan bir yapıdır.
-Projede Kullanım Amacı: Uzun süren işlemleri arka planda çalıştırarak UI'nin yanıt verebilirliğini artırır.
 
 **RecyclerView:**
 
@@ -52,7 +29,8 @@ Projede Kullanım Amacı: Dinamik veri listelerini verimli bir şekilde gösterm
 
 Açıklama: Uygulama içindeki navigasyonu yönetmek için kullanılan bir kütüphanedir.
 Projede Kullanım Amacı: Fragmentler arasında geçişleri kolaylaştırır ve yönlendirme işlemlerini yönetir.
-Snackbar
+
+**Snackbar:**
 
 Açıklama: Kısa süreli bildirimler göstermek için kullanılan bir bileşendir.
 Projede Kullanım Amacı: Kullanıcılara geçici bilgi veya işlem sonuçları hakkında geri bildirim sağlamak.
@@ -92,6 +70,14 @@ Projede Kullanım Amacı: Uygulama verilerini ve iş mantığını yönetir. Rep
 
 Projede Kullanım Amacı: Kullanıcı arayüzünü ve etkileşimlerini yönetir. Fragment ve ViewModel'lar bu katmanda bulunur.
 
+**LiveData:**
+
+Projede Kullanım Amacı: UI bileşenlerini veri değişikliklerine tepki verecek şekilde günceller.
+
+**ViewModel:**
+
+Projede Kullanım Amacı: UI verilerini yönetir ve UI ile veri arasındaki yaşam döngüsü yönetimini sağlar.
+
 **Kotlin Coroutines:**
 
 Projede Kullanım Amacı: Asenkron işlemleri yönetmek ve arka planda işlemleri yürütmek için kullanılır.
@@ -100,7 +86,7 @@ Projede Kullanım Amacı: Asenkron işlemleri yönetmek ve arka planda işlemler
 
 ## Ekran Görüntüleri
 
-|||||
+
 |------------------|------------------|------------------|------------------|
 | ![Ekran 1](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/ContactsAppKotlin/Ss1.png?raw=true) | ![Ekran 2](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/ContactsAppKotlin/Ss2.png?raw=true) | ![Ekran 3](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/ContactsAppKotlin/Ss3.png?raw=true) | ![Ekran 4](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/ContactsAppKotlin/Ss4.png?raw=true) |
   
