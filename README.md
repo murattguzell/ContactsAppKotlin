@@ -87,7 +87,9 @@ Projede Kullanım Amacı: API'ye form verilerini göndermek için kullanılır.
 **Data Layer:**
 
 Projede Kullanım Amacı: Uygulama verilerini ve iş mantığını yönetir. Repository ve DataSource gibi bileşenlerle veri işlemleri yapılır.
-UI Layer
+
+**UI Layer:**
+
 Projede Kullanım Amacı: Kullanıcı arayüzünü ve etkileşimlerini yönetir. Fragment ve ViewModel'lar bu katmanda bulunur.
 
 **Kotlin Coroutines:**
