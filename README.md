@@ -101,7 +101,7 @@ Projede Kullanım Amacı: Asenkron işlemleri yönetmek ve arka planda işlemler
 ## Ekran Görüntüleri
 
   ### Ekran Görüntüleri
-| Ekran Görüntüsü 1 | Ekran Görüntüsü 2 | Ekran Görüntüsü 3 | Ekran Görüntüsü 4 |
+|||||
 |------------------|------------------|------------------|------------------|
 | ![Ekran 1](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/ContactsAppKotlin/Ss1.png?raw=true) | ![Ekran 2](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/ContactsAppKotlin/Ss2.png?raw=true) | ![Ekran 3](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/ContactsAppKotlin/Ss3.png?raw=true) | ![Ekran 4](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/ContactsAppKotlin/Ss4.png?raw=true) |
   
