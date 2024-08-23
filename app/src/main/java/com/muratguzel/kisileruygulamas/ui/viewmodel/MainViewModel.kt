@@ -25,11 +25,17 @@ class MainViewModel @Inject constructor(var krepo: KisilerRepository) : ViewMode
         }
 
     fun kisileriYukle() = viewModelScope.launch(Dispatchers.Main) {
-        kisilerListesi.value = krepo.kisileriYukle()
+        try {
+            kisilerListesi.value = krepo.kisileriYukle()
+        } catch (e:Exception){}
+
     }
 
     fun ara(aramaKelimesi: String) =
         viewModelScope.launch(Dispatchers.Main) {
-            kisilerListesi.value = krepo.ara(aramaKelimesi)
+            try {
+                kisilerListesi.value = krepo.ara(aramaKelimesi)
+            } catch (e:Exception){}
+
         }
 }

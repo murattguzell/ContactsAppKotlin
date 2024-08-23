@@ -30,6 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/blue"
             android:clickable="true"
             android:onClick="@{()->mainFragment.fub(fab)}"
             android:src="@drawable/ekle_resim"
@@ -57,13 +58,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="?attr/colorPrimary"
+            android:background="@color/blue"
             android:minHeight="?attr/actionBarSize"
-            app:title="@{mainToolBarBaslik}"
             android:theme="?attr/actionBarTheme"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@{mainToolBarBaslik}"
+            app:titleTextColor="@color/white" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"

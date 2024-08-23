@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="kisiDetayToolBarBaslik"
             type="String" />
+
         <variable
             name="detayFragment"
             type="com.muratguzel.kisileruygulamas.ui.fragment.DetayFragment" />
@@ -25,13 +27,14 @@
             android:id="@+id/toolbar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:title="@{kisiDetayToolBarBaslik}"
-            android:background="?attr/colorPrimary"
+            android:background="@color/blue"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@{kisiDetayToolBarBaslik}"
+            app:titleTextColor="@color/white" />
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -50,8 +53,8 @@
                 android:id="@+id/editTextKisiAdi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@{kisiNesnesi.kisi_ad}"
-                android:hint="Kişi Ad" />
+                android:hint="Kişi Ad"
+                android:text="@{kisiNesnesi.kisi_ad}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -70,8 +73,8 @@
                 android:id="@+id/editTextTel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@{kisiNesnesi.kisi_tel}"
-                android:hint="Kişi Tel" />
+                android:hint="Kişi Tel"
+                android:text="@{kisiNesnesi.kisi_tel}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -81,8 +84,9 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="64dp"
             android:layout_marginEnd="32dp"
-            android:text="GÜNCELLE"
+            android:backgroundTint="@color/blue"
             android:onClick="@{()->detayFragment.guncelle(kisiNesnesi.kisi_id,editTextKisiAdi.getText().toString(),editTextTel.getText().toString())}"
+            android:text="GÜNCELLE"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
