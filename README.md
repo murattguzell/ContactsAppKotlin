@@ -1,92 +1,90 @@
-
 # Contacts APP
 
-Bu proje, telefon rehberi uygulamasıdır ve kullanıcıların istedikleri kişilerin iletişim bilgilerini kolayca kaydetmelerini, güncellemelerini ve silmelerini sağlar. Kullanıcılar, isim, telefon numarası gibi bilgileri uygulama aracılığıyla düzenli bir şekilde yönetebilir. Uygulama, kullanıcıların kişisel rehberlerini dijital ortamda düzenlemelerine ve yönetmelerine yardımcı olur; böylece iletişim bilgileri her zaman erişilebilir ve güncel kalır.
+This project is a phonebook application and allows users to easily save, update and delete contact information of the people they want. Users can manage information such as name and phone number in an organized manner through the application. The application helps users organize and manage their personal contacts in a digital environment; thus, their contact information is always accessible and up-to-date.
 
+## Features
 
-## Özellikler
+- Users can add new contacts to their phonebooks. They can easily add information to their contacts by entering basic information such as name and phone number for each person.
+- Users can update the information of the people in their contacts. They can always keep their contacts up-to-date by making changes to their names, phone numbers or other details.
+- Users can easily delete people they do not want from their contacts. In this way, they can keep their contacts clean by removing unnecessary or old contact information.
+- All contact information is stored in a secure database on the internet. This keeps your data always accessible and safe.
 
-- Kullanıcılar, telefon rehberlerine yeni kişiler ekleyebilirler. Her kişi için isim, telefon numarası gibi temel bilgileri girerek rehberlerine kolayca bilgi ekleyebilirler.
-- Kullanıcılar, rehberdeki kişilerin bilgilerini güncelleyebilirler. İsim, telefon numarası veya diğer detaylarda değişiklik yaparak her zaman güncel bilgilerle rehberlerini koruyabilirler.
-- Kullanıcılar, rehberlerinden istemedikleri kişileri kolayca silebilirler. Bu sayede gereksiz veya eski iletişim bilgilerini kaldırarak rehberlerini temiz tutabilirler.
-- Tüm iletişim bilgileri internet üzerinde güvenli bir veri tabanında saklanır. Bu, verilerinizi her zaman erişilebilir ve güvende tutar.
-
-## Kullanılan Teknolojiler
+## Technologies Used
 
 **Android Jetpack**
 
 **Retrofit:**
 
-Açıklama: HTTP isteklerini basit bir şekilde yönetmek için kullanılan bir kütüphane.
-Projede Kullanım Amacı: API çağrılarını gerçekleştirmek ve JSON verilerini Kotlin veri sınıflarına dönüştürmek. Hem GET (veri çekme) hem de POST (veri gönderme) işlemleri yapılır.
+Description: A library used to manage HTTP requests in a simple way.
+Project Purpose: To make API calls and convert JSON data to Kotlin data classes. Both GET (data retrieval) and POST (data sending) operations are performed.
 
 **RecyclerView:**
 
-Açıklama: Liste ve grid düzenlerinde veri göstermek için kullanılan bir bileşen.
-Projede Kullanım Amacı: Dinamik veri listelerini verimli bir şekilde göstermek.
+Description: A component used to display data in list and grid layouts.
+Project Purpose: To display dynamic data lists efficiently.
 
 **Navigation Component:**
 
-Açıklama: Uygulama içindeki navigasyonu yönetmek için kullanılan bir kütüphanedir.
-Projede Kullanım Amacı: Fragmentler arasında geçişleri kolaylaştırır ve yönlendirme işlemlerini yönetir.
+Description: A library used to manage navigation within the application.
+Project Purpose: Facilitates transitions between fragments and manages routing operations.
 
 **Snackbar:**
 
-Açıklama: Kısa süreli bildirimler göstermek için kullanılan bir bileşendir.
-Projede Kullanım Amacı: Kullanıcılara geçici bilgi veya işlem sonuçları hakkında geri bildirim sağlamak.
+Description: A component used to display short-term notifications.
+Project Purpose: To provide feedback to users about temporary information or operation results.
 
 **Data Binding:**
 
-Açıklama: XML'deki UI bileşenlerini veri modelleri ile bağlamak için kullanılan bir kütüphanedir.
-Projede Kullanım Amacı: UI güncellemelerini otomatikleştirmek ve boilerplate kodunu azaltmak.
+Description: A library used to bind UI components in XML with data models.
+Project Purpose: To automate UI updates and reduce boilerplate code.
 
 **Serializable:**
 
-Açıklama: Kotlin sınıflarını veri iletimi için serileştirmek için kullanılan bir arayüzdür.
-Projede Kullanım Amacı: Nesneleri Parcelable veya Serializable olarak geçirebilmek.
+Description: An interface used to serialize Kotlin classes for data transmission.
+
+Purpose of Use in the Project: To be able to pass objects as Parcelable or Serializable.
 
 **Dagger-Hilt:**
 
-Açıklama: Dependency Injection için Hilt kütüphanesi.
-Projede Kullanım Amacı: Daha basit ve etkili bir DI çözümü sağlar, uygulamanın bağımlılıklarını yönetir.
+Description: Hilt library for Dependency Injection.
+
+Purpose of Use in the Project: Provides a simpler and more effective DI solution, manages the dependencies of the application.
 
 **CardView:**
 
-Açıklama: Kart şeklinde bir görünüm sağlayan UI bileşenidir.
-Projede Kullanım Amacı: Bilgiyi kart şeklinde düzenli ve estetik bir şekilde göstermek.
+Description: A UI component that provides a card-shaped view.
+
+Purpose of Use in the Project: To display information in a regular and aesthetic way in the form of a card.
 
 **FormUrlEncoded:**
 
-Açıklama: POST isteği ile form verilerini göndermek için kullanılan bir format.
-Projede Kullanım Amacı: API'ye form verilerini göndermek için kullanılır.
+Description: A format used to send form data with a POST request.
+Purpose of Use in the Project: Used to send form data to the API.
 
 **MVVM (Model-View-ViewModel):**
 
 **Data Layer:**
 
-Projede Kullanım Amacı: Uygulama verilerini ve iş mantığını yönetir. Repository ve DataSource gibi bileşenlerle veri işlemleri yapılır.
+Purpose of Use in the Project: Manages application data and business logic. Data operations are performed with components such as Repository and DataSource.
 
 **UI Layer:**
 
-Projede Kullanım Amacı: Kullanıcı arayüzünü ve etkileşimlerini yönetir. Fragment ve ViewModel'lar bu katmanda bulunur.
+Purpose of Use in the Project: Manages the user interface and its interactions. Fragments and ViewModels are located in this layer.
 
 **LiveData:**
 
-Projede Kullanım Amacı: UI bileşenlerini veri değişikliklerine tepki verecek şekilde günceller.
+Purpose of Use in the Project: Updates UI components to respond to data changes.
 
 **ViewModel:**
 
-Projede Kullanım Amacı: UI verilerini yönetir ve UI ile veri arasındaki yaşam döngüsü yönetimini sağlar.
+Purpose of Use in the Project: Manages UI data and provides lifecycle management between UI and data.
 
 **Kotlin Coroutines:**
 
-Projede Kullanım Amacı: Asenkron işlemleri yönetmek ve arka planda işlemleri yürütmek için kullanılır.
+Purpose of Use in the Project: Used to manage asynchronous operations and execute operations in the background.
 
-
-
-## Ekran Görüntüleri
+## Screenshots
 
 |||||
 |------------------|------------------|------------------|------------------|
-| ![Ekran 1](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/ContactsAppKotlin/Ss1.png?raw=true) | ![Ekran 2](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/ContactsAppKotlin/Ss2.png?raw=true) | ![Ekran 3](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/ContactsAppKotlin/Ss3.png?raw=true) | ![Ekran 4](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/ContactsAppKotlin/Ss4.png?raw=true) |
-  
+| ![Screen 1](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/ContactsAppKotlin/Ss1.png?raw=true) | ![Screen 2](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/ContactsAppKotlin/Ss2.png?raw=true) | ![Screen 3](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/ContactsAppKotlin/Ss3.png?raw=true) | ![Screen 4](https://github.com/murat-guzel33/myScreenShotFiles/blob/master/ContactsAppKotlin/Ss4.png?raw=true) |
